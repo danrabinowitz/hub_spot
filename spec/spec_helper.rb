@@ -1,5 +1,10 @@
+require "simplecov"
 require "bundler/setup"
+require 'byebug'
+
 require "hub_spot"
+require "support/config_helper"
+require 'support/vcr_helper'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -10,5 +15,9 @@ RSpec.configure do |config|
 
   config.expect_with :rspec do |c|
     c.syntax = :expect
+  end
+
+  config.before(:each) do
+    reset_config
   end
 end
