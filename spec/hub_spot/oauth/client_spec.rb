@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "spec_helper"
 
 RSpec.describe HubSpot::OAuth::Client do
@@ -6,7 +8,10 @@ RSpec.describe HubSpot::OAuth::Client do
 
     context "a token exists and is not expired" do
       before(:each) do
-        HubSpot::OAuth::Client.instance_variable_set(:@token, HubSpot::OAuth::Token.new(value: 'value', expires_at: Time.now + 1000))
+        HubSpot::OAuth::Client.instance_variable_set(
+          :@token,
+          HubSpot::OAuth::Token.new(value: "value", expires_at: Time.now + 1000),
+        )
       end
 
       it "does not make an HTTP call" do

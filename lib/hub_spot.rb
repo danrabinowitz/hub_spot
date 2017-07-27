@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "hub_spot/configuration"
 require "hub_spot/http"
 require "hub_spot/oauth"

@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 module HubSpot
   class Configuration
-    ATTRIBUTES = %i(api_host client_id client_secret redirect_uri refresh_token logger).freeze
+    ATTRIBUTES = %i[api_host client_id client_secret redirect_uri refresh_token logger].freeze
 
     class << self
       attr_accessor(*ATTRIBUTES)

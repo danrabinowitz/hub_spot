@@ -7,11 +7,11 @@ $LOADED_FEATURES.delete_if { |s| s.include?("hub_spot/version") }
 
 require "simplecov"
 require "bundler/setup"
-require 'byebug'
+require "byebug"
 
 require "hub_spot"
 require "support/config_helper"
-require 'support/vcr_helper'
+require "support/vcr_helper"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

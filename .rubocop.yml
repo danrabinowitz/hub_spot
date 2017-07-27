@@ -1,0 +1,58 @@
+# For possible values, see: https://github.com/bbatsov/rubocop/blob/master/config/default.yml
+
+AllCops:
+  TargetRubyVersion: 2.4
+  DisplayStyleGuide: false
+  # Exclude:
+  #   - db/**/*
+  # StyleGuideCopsOnly: true
+
+Rails:
+  Enabled: false
+
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+Style/AndOr:
+  # Whether `and` and `or` are banned only in conditionals (conditionals)
+  # or completely (always).
+  EnforcedStyle: conditionals
+
+# Style/DoubleNegation:
+#    Enabled: false
+
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+# Style/NumericLiterals:
+#   Enabled: false
+
+Style/TrailingUnderscoreVariable:
+  AllowNamedUnderscoreVariables: true
+
+# Style/GuardClause:
+#   Enabled: false
+
+# Lint/HandleExceptions:
+#   Exclude:
+#     - 'bin/rails'
+#     - 'bin/rake'
+
+# Style/MultilineBlockChain:
+#   Enabled: false
+
+Metrics/LineLength:
+  Max: 110
+  # Exclude:
+  #   - 'bin/spring'
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented_relative_to_receiver
+
+Style/Documentation:
+ Enabled: false

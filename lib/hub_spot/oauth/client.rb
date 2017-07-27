@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module HubSpot
   module OAuth
     module Client
-      URL = "https://api.hubapi.com/oauth/v1/token?grant_type=refresh_token&client_id=%{client_id}&client_secret=%{client_secret}&redirect_uri=%{redirect_uri}&refresh_token=%{refresh_token}"
+      URL = "https://api.hubapi.com/oauth/v1/token?grant_type=refresh_token&client_id=%<client_id>s&client_secret=%<client_secret>s&redirect_uri=%<redirect_uri>s&refresh_token=%<refresh_token>s" # rubocop:disable Metrics/LineLength
       @token = Token.new(expires_at: Time.now - 1)
 
       module_function
@@ -20,12 +22,14 @@ module HubSpot
       def token_params
         expires_in, token_value = api_response.values_at("expires_in", "access_token")
         expires_at = Time.now + expires_in
-        {value: token_value, expires_at: expires_at}
+        { value: token_value, expires_at: expires_at }
       end
 
       def api_response
         response = HubSpot::HTTP.post(url: url)
-        raise StandardError.new("OAuth API call returned a #{response.code} != 200") unless response.code.to_s == "200"
+        if response.code.to_s != "200"
+          raise StandardError, "OAuth API call returned a #{response.code} != 200"
+        end
         # puts response.body
         JSON.parse(response.body)
       end

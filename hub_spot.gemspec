@@ -1,16 +1,18 @@
 # coding: utf-8
+# frozen_string_literal: true
+
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "hub_spot/version"
 
-Gem::Specification.new do |spec|
+Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
   spec.name          = "hub_spot"
   spec.version       = HubSpot::VERSION
   spec.authors       = ["Dan Rabinowitz"]
   spec.email         = ["djr@DanielRabinowitz.com"]
 
-  spec.summary       = %q{Omakase ruby API for HubSpot}
-  spec.description   = %q{Omakase ruby API for HubSpot}
+  spec.summary       = "Omakase ruby API for HubSpot"
+  spec.description   = "Omakase ruby API for HubSpot"
   spec.homepage      = "https://github.com/danrabinowitz/hub_spot"
   spec.license       = "MIT"
 
@@ -23,7 +25,7 @@ Gem::Specification.new do |spec|
       "public gem pushes."
   end
 
-  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
+  spec.files = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
   end
   spec.bindir        = "exe"
