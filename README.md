@@ -1,5 +1,12 @@
 # HubSpot
 
+[![Gem Version](https://badge.fury.io/rb/hub_spot.svg)](https://badge.fury.io/rb/hub_spot)
+[![Code Climate](https://codeclimate.com/github/danrabinowitz/hub_spot/badges/gpa.svg)](https://codeclimate.com/github/danrabinowitz/hub_spot)
+[![Build Status](https://travis-ci.org/danrabinowitz/hub_spot.svg?branch=master)](https://travis-ci.org/danrabinowitz/hub_spot)
+[![Test Coverage](https://codeclimate.com/github/danrabinowitz/hub_spot/badges/coverage.svg)](https://codeclimate.com/github/danrabinowitz/hub_spot/coverage)
+[![Gem](https://img.shields.io/gem/dt/hub_spot.svg?maxAge=2592000)](https://rubygems.org/gems/hub_spot)
+
+
 TODO:
 
 1. Add rubocop
