@@ -4,7 +4,10 @@ module HubSpot
   module OAuth
     module Client
       URL = "https://api.hubapi.com/oauth/v1/token?grant_type=refresh_token&client_id=%<client_id>s&client_secret=%<client_secret>s&redirect_uri=%<redirect_uri>s&refresh_token=%<refresh_token>s" # rubocop:disable Metrics/LineLength
-      @token = Token.new(expires_at: Time.now - 1)
+      EXPIRED_TOKEN = Token.new(expires_at: Time.now - 1).freeze
+      @token = EXPIRED_TOKEN
+
+      class APIError < StandardError; end
 
       module_function
 
@@ -14,6 +17,10 @@ module HubSpot
         else
           @token
         end
+      end
+
+      def expire
+        @token = EXPIRED_TOKEN
       end
 
       # TODO: Make these private module methods
@@ -28,7 +35,7 @@ module HubSpot
       def api_response
         response = HubSpot::HTTP.post(url: url)
         if response.code.to_s != "200"
-          raise StandardError, "OAuth API call returned a #{response.code} != 200"
+          raise APIError, "OAuth API call returned a #{response.code} != 200"
         end
         # puts response.body
         JSON.parse(response.body)

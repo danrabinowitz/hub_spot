@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.hubapi.com/oauth/v1/token?client_id=<HUBSPOT_CLIENT_ID>&client_secret=c<HUBSPOT_CLIENT_ID>dc36f8-d2f3-473a-9214-4cbaffa87654&grant_type=refresh_token&redirect_uri=<HUBSPOT_REDIRECT_URI>&refresh_token=c7235b1d-9aea-45e1-833<HUBSPOT_CLIENT_ID>-688f13362ad3
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=utf-8
+      Accept-Encoding:
+      - gzip;q=1.<HUBSPOT_CLIENT_ID>,deflate;q=<HUBSPOT_CLIENT_ID>.6,identity;q=<HUBSPOT_CLIENT_ID>.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Trace:
+      - 1B<HUBSPOT_CLIENT_ID>B<HUBSPOT_CLIENT_ID>4C<HUBSPOT_CLIENT_ID>55D6<HUBSPOT_CLIENT_ID>27BF2B1D3DF7B47553CA<HUBSPOT_CLIENT_ID>6661<HUBSPOT_CLIENT_ID>E<HUBSPOT_CLIENT_ID>9491B76EBC3D741A6
+      Content-Length:
+      - '169'
+      Date:
+      - Thu, 27 Jul 2<HUBSPOT_CLIENT_ID>17 19:4<HUBSPOT_CLIENT_ID>:45 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"BAD_CLIENT_ID","message":"missing or unknown client id","correlationId":"51b32ef5-2b2f-43b5-91bd-5<HUBSPOT_CLIENT_ID><HUBSPOT_CLIENT_ID>ae54<HUBSPOT_CLIENT_ID>ded6","requestId":"<HUBSPOT_CLIENT_ID>d2e22<HUBSPOT_CLIENT_ID>a61f22d8cd8d9c45578ecbd99"}'
+    http_version: 
+  recorded_at: Thu, 27 Jul 2017 19:40:45 GMT
+recorded_with: VCR 3.0.3

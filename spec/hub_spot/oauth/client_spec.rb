@@ -19,5 +19,18 @@ RSpec.describe HubSpot::OAuth::Client do
         subject
       end
     end
+
+    context "the client id is invalid", vcr: true do
+      before(:each) do
+        HubSpot::Configuration.client_id = '0'
+        HubSpot::OAuth::Client.expire
+      end
+
+      it "raises an exception" do
+        expect do
+          subject
+        end.to raise_error(HubSpot::OAuth::Client::APIError)
+      end
+    end
   end
 end
