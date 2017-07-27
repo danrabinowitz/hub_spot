@@ -29,19 +29,19 @@ http_interactions:
       Pragma:
       - no-cache
       X-Trace:
-      - 1B49EC59F3DB731D377C6CC61BD3986EC9B4942C5121B5D5EBEF0C4158
+      - 1BCEDA9C0090FDBD23575F3ACC9B62DDEE4CBE522793348DF76C9088F8
       Vary:
       - Accept-Encoding
       - user-agent
       Date:
-      - Thu, 27 Jul 2017 07:12:08 GMT
+      - Thu, 27 Jul 2017 19:48:33 GMT
       Content-Length:
       - '160'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"refresh_token":"<HUBSPOT_REFRESH_TOKEN>","access_token":"COaFtKHYKxICAwEYrYobIJKJLijE0AEyGQBC-5ITcLIEHBdAUz0DFVE4lRHdst18KZM","expires_in":21600}'
+      string: '{"refresh_token":"<HUBSPOT_REFRESH_TOKEN>","access_token":"CKGQhrfYKxICAwEYrYobIJKJLijE0AEyGQBC-5ITrmvFfP6sP36A3_iMrDWqAblZJxc","expires_in":21600}'
     http_version: 
-  recorded_at: Thu, 27 Jul 2017 07:12:08 GMT
+  recorded_at: Thu, 27 Jul 2017 19:48:33 GMT
 recorded_with: VCR 3.0.3

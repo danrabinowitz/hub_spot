@@ -25,16 +25,16 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       X-Trace:
-      - 1B<HUBSPOT_CLIENT_ID>B<HUBSPOT_CLIENT_ID>4C<HUBSPOT_CLIENT_ID>55D6<HUBSPOT_CLIENT_ID>27BF2B1D3DF7B47553CA<HUBSPOT_CLIENT_ID>6661<HUBSPOT_CLIENT_ID>E<HUBSPOT_CLIENT_ID>9491B76EBC3D741A6
+      - 1B86AAFE5C43EA7BBF6E3586<HUBSPOT_CLIENT_ID>85821A6D23CB52EE1<HUBSPOT_CLIENT_ID>F<HUBSPOT_CLIENT_ID>B<HUBSPOT_CLIENT_ID>7E76926147C
       Content-Length:
       - '169'
       Date:
-      - Thu, 27 Jul 2<HUBSPOT_CLIENT_ID>17 19:4<HUBSPOT_CLIENT_ID>:45 GMT
+      - Thu, 27 Jul 2<HUBSPOT_CLIENT_ID>17 19:48:33 GMT
       Connection:
       - close
     body:
       encoding: UTF-8
-      string: '{"status":"BAD_CLIENT_ID","message":"missing or unknown client id","correlationId":"51b32ef5-2b2f-43b5-91bd-5<HUBSPOT_CLIENT_ID><HUBSPOT_CLIENT_ID>ae54<HUBSPOT_CLIENT_ID>ded6","requestId":"<HUBSPOT_CLIENT_ID>d2e22<HUBSPOT_CLIENT_ID>a61f22d8cd8d9c45578ecbd99"}'
+      string: '{"status":"BAD_CLIENT_ID","message":"missing or unknown client id","correlationId":"12a96915-14ba-46c3-a7f6-76c1d6952f76","requestId":"ee1852e1e534e6779327915f<HUBSPOT_CLIENT_ID>eada<HUBSPOT_CLIENT_ID>16"}'
     http_version: 
-  recorded_at: Thu, 27 Jul 2017 19:40:45 GMT
+  recorded_at: Thu, 27 Jul 2017 19:48:33 GMT
 recorded_with: VCR 3.0.3

@@ -5,7 +5,7 @@ lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "hub_spot/version"
 
-Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
+Gem::Specification.new do |spec|
   spec.name          = "hub_spot"
   spec.version       = HubSpot::VERSION
   spec.authors       = ["Dan Rabinowitz"]

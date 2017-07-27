@@ -5,7 +5,7 @@ module HubSpot
     module_function
 
     def access_token
-      Client.token.value
+      TokenStore.value
     end
   end
 end
