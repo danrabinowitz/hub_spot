@@ -22,7 +22,7 @@ RSpec.describe HubSpot::OAuth::TokenStore do
 
     context "the client id is invalid", vcr: true do
       before(:each) do
-        HubSpot::Configuration.client_id = "0"
+        HubSpot::Configuration.client_id = "INVALID_HUBSPOT_CLIENT_ID"
         HubSpot::OAuth::TokenStore.expire
       end
 

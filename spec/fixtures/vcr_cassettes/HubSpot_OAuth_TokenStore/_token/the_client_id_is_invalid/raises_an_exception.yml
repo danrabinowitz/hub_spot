@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.hubapi.com/oauth/v1/token?client_id=<HUBSPOT_CLIENT_ID>&client_secret=c<HUBSPOT_CLIENT_ID>dc36f8-d2f3-473a-9214-4cbaffa87654&grant_type=refresh_token&redirect_uri=<HUBSPOT_REDIRECT_URI>&refresh_token=c7235b1d-9aea-45e1-833<HUBSPOT_CLIENT_ID>-688f13362ad3
+    uri: https://api.hubapi.com/oauth/v1/token?client_id=<HUBSPOT_CLIENT_ID>&client_secret=<HUBSPOT_CLIENT_SECRET>&grant_type=refresh_token&redirect_uri=<HUBSPOT_REDIRECT_URI>&refresh_token=<HUBSPOT_REFRESH_TOKEN>
     body:
       encoding: UTF-8
       string: ''
@@ -12,7 +12,7 @@ http_interactions:
       Content-Type:
       - application/x-www-form-urlencoded;charset=utf-8
       Accept-Encoding:
-      - gzip;q=1.<HUBSPOT_CLIENT_ID>,deflate;q=<HUBSPOT_CLIENT_ID>.6,identity;q=<HUBSPOT_CLIENT_ID>.3
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
       - Ruby
   response:
@@ -25,16 +25,16 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       X-Trace:
-      - 1B86AAFE5C43EA7BBF6E3586<HUBSPOT_CLIENT_ID>85821A6D23CB52EE1<HUBSPOT_CLIENT_ID>F<HUBSPOT_CLIENT_ID>B<HUBSPOT_CLIENT_ID>7E76926147C
+      - 1BC0788933E26E3FEF5E4110CF09B4427E4AE598B7B54B58186DC9D803
       Content-Length:
       - '169'
       Date:
-      - Thu, 27 Jul 2<HUBSPOT_CLIENT_ID>17 19:48:33 GMT
+      - Thu, 27 Jul 2017 20:00:38 GMT
       Connection:
       - close
     body:
       encoding: UTF-8
-      string: '{"status":"BAD_CLIENT_ID","message":"missing or unknown client id","correlationId":"12a96915-14ba-46c3-a7f6-76c1d6952f76","requestId":"ee1852e1e534e6779327915f<HUBSPOT_CLIENT_ID>eada<HUBSPOT_CLIENT_ID>16"}'
+      string: '{"status":"BAD_CLIENT_ID","message":"missing or unknown client id","correlationId":"a9058138-545d-4985-81fd-9d6766d1a9eb","requestId":"d96efe502cfea2d7e3222934f0dd1858"}'
     http_version: 
-  recorded_at: Thu, 27 Jul 2017 19:48:33 GMT
+  recorded_at: Thu, 27 Jul 2017 20:00:38 GMT
 recorded_with: VCR 3.0.3
