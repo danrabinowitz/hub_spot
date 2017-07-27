@@ -9,8 +9,6 @@
 
 TODO:
 
-1. Add rubocop
-
 2. Accept any cache which conforms to an interface. (Think of Moneta)
 
 
