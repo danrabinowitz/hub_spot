@@ -1,3 +1,10 @@
+# frozen_string_literal: true
+
+# Hack to remove VERSION (which is loaded/required via Gemfile -> *.gemspec) before simplecov
+# Without this, simplecov reports the VERSION is not covered by specs.
+HubSpot.send(:remove_const, "VERSION") if defined?(HubSpot)
+$LOADED_FEATURES.delete_if { |s| s.include?("hub_spot/version") }
+
 require "simplecov"
 require "bundler/setup"
 require 'byebug'
