@@ -21,7 +21,7 @@ RSpec.describe HubSpot::Contact do
 
       it "returns the expected response" do
         expect(subject.class).to eq(Hash)
-        expect(subject.keys).to eq(["vid", "isNew"])
+        expect(subject.keys).to eq(%w[vid isNew])
       end
     end
   end

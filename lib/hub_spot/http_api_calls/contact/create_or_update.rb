@@ -22,7 +22,7 @@ module HubSpot
         end
 
         def url
-          URL % {email: email}
+          format(URL, email: email)
         end
 
         def email
@@ -38,11 +38,11 @@ module HubSpot
         end
 
         def post_body
-          {"properties" => properties_array}
+          { "properties" => properties_array }
         end
 
         def properties_array
-          properties.map{ |k,v| {"property" => k.to_s, "value" => v} }
+          properties.map { |k, v| { "property" => k.to_s, "value" => v } }
         end
       end
     end

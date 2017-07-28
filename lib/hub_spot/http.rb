@@ -10,7 +10,7 @@ module HubSpot
     }.freeze
 
     # Authentication credentials for HTTP authentication.
-    AUTHORIZATION = "Authorization".freeze
+    AUTHORIZATION = "Authorization"
 
     module_function
 
