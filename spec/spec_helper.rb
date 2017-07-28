@@ -11,6 +11,7 @@ require "byebug"
 
 require "hub_spot"
 require "support/config_helper"
+require "support/oauth_helper"
 require "support/vcr_helper"
 
 RSpec.configure do |config|
@@ -26,5 +27,6 @@ RSpec.configure do |config|
 
   config.before(:each) do
     reset_config
+    expire_token
   end
 end

@@ -7,13 +7,6 @@ RSpec.describe HubSpot::OAuth do
     subject { HubSpot::OAuth.access_token }
 
     context "The current token is expired" do
-      before(:each) do
-        HubSpot::OAuth::Client.instance_variable_set(
-          :@token,
-          HubSpot::OAuth::Token.new(expires_at: Time.now - 1),
-        )
-      end
-
       it { should_not be_empty }
     end
   end

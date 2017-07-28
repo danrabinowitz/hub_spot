@@ -1,0 +1,86 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.hubapi.com/oauth/v1/token?client_id=<HUBSPOT_CLIENT_ID>&client_secret=<HUBSPOT_CLIENT_SECRET>&grant_type=refresh_token&redirect_uri=<HUBSPOT_REDIRECT_URI>&refresh_token=<HUBSPOT_REFRESH_TOKEN>
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=utf-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Cache-Control:
+      - no-store, no-transform
+      Content-Type:
+      - application/json; charset=UTF-8
+      Pragma:
+      - no-cache
+      X-Trace:
+      - 1BC98682C5FF713426A0F4C9244351EB1FB056FE20579916C831B4BD26
+      Vary:
+      - Accept-Encoding
+      - user-agent
+      Date:
+      - Fri, 28 Jul 2017 05:15:56 GMT
+      Content-Length:
+      - '160'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"refresh_token":"<HUBSPOT_REFRESH_TOKEN>","access_token":"CKX3o8fYKxICAwEYrYobIJKJLijE0AEyGQBC-5ITjrsEt85ZleTZ7pa9uYWicMZyLSk","expires_in":21600}'
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 05:15:56 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/djr@DanielRabinowitz.com
+    body:
+      encoding: UTF-8
+      string: '{"properties":[{"property":"email","value":"djr@DanielRabinowitz.com"},{"property":"firstname","value":"Dan"}]}'
+    headers:
+      Accept:
+      - "*/*"
+      Content-Type:
+      - application/x-www-form-urlencoded;charset=utf-8
+      Authorization:
+      - Bearer CKX3o8fYKxICAwEYrYobIJKJLijE0AEyGQBC-5ITjrsEt85ZleTZ7pa9uYWicMZyLSk
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Fri, 28 Jul 2017 05:15:56 GMT
+      Content-Length:
+      - '29'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"vid":6911092,"isNew":false}'
+    http_version: 
+  recorded_at: Fri, 28 Jul 2017 05:15:56 GMT
+recorded_with: VCR 3.0.3

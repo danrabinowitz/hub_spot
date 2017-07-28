@@ -9,6 +9,9 @@ module HubSpot
       content_type: "application/x-www-form-urlencoded;charset=utf-8",
     }.freeze
 
+    # Authentication credentials for HTTP authentication.
+    AUTHORIZATION = "Authorization".freeze
+
     module_function
 
     def post(url:, post_body: nil, headers: DEFAULT_HEADERS)
