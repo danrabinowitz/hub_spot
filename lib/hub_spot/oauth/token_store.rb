@@ -12,7 +12,9 @@ module HubSpot
         token.value
       end
 
-      # TODO: Make these private module methods
+      def expire
+        @token = EXPIRED_TOKEN
+      end
 
       def token
         if @token.expired?
@@ -20,10 +22,6 @@ module HubSpot
         else
           @token
         end
-      end
-
-      def expire
-        @token = EXPIRED_TOKEN
       end
     end
   end

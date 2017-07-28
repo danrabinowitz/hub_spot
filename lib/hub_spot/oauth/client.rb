@@ -15,9 +15,7 @@ module HubSpot
         { value: token_value, expires_at: expires_at }
       end
 
-      # TODO: Make these private module methods
-      # private
-
+      # Below here are private methods
       def api_response
         response = HubSpot::HTTP.post(url: url)
         if response.code.to_s != "200"
@@ -37,6 +35,10 @@ module HubSpot
           redirect_uri: HubSpot::Configuration.redirect_uri,
           refresh_token: HubSpot::Configuration.refresh_token,
         }
+      end
+
+      class << self
+        private :api_response, :url, :url_params
       end
     end
   end

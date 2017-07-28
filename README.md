@@ -8,11 +8,6 @@
 
 
 TODO:
-
-2. Accept any cache which conforms to an interface. (Think of Moneta)
-
-
-HubSpot::Configuration.cache = Moneta.new(:LRUHash, expires: true)
 HubSpot::Oauth.access_token
 
 
