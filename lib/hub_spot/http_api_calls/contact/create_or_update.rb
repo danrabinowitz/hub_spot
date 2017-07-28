@@ -26,7 +26,7 @@ module HubSpot
         end
 
         def email
-          properties.fetch("email")
+          properties.fetch(:email)
         end
 
         def headers

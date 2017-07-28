@@ -17,7 +17,7 @@ RSpec.describe HubSpot::Contact do
     end
 
     context "properties is valid", vcr: true do
-      let(:properties) { Hash["email" => "djr@DanielRabinowitz.com", "firstname" => "Dan"] }
+      let(:properties) { Hash[:email => "djr@DanielRabinowitz.com", "firstname" => "Dan"] }
 
       it "returns the expected response" do
         expect(subject.class).to eq(Hash)
