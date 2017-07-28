@@ -16,9 +16,7 @@ module HubSpot
         attr_reader :properties
 
         def make_the_call
-          response = HubSpot::HTTP.post(url: url, headers: headers, post_body: post_body)
-          puts response
-          response
+          HubSpot::HTTP.post(url: url, headers: headers, post_body: post_body)
         end
 
         def url
