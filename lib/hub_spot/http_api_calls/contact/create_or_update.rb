@@ -8,7 +8,7 @@ module HubSpot
         URL = "https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/%<email>s"
 
         def initialize(properties)
-          @properties = properties
+          @properties = ::HubSpot.stringify_keys(properties)
         end
 
         private
@@ -24,7 +24,7 @@ module HubSpot
         end
 
         def email
-          properties.fetch(:email)
+          properties.fetch("email")
         end
 
         def headers

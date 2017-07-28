@@ -13,5 +13,25 @@ require "hub_spot/oauth/client"
 require "hub_spot/version"
 
 module HubSpot
-  # Your code goes here...
+  module_function
+
+  # From @avdi per http://www.virtuouscode.com/2009/11/20/hash-transforms-in-ruby/
+  def transform_hash(original, options={}, &block)
+    original.inject({}){|result, (key,value)|
+      value = if (options[:deep] && Hash === value) 
+                transform_hash(value, options, &block)
+              else 
+                value
+              end
+      block.call(result,key,value)
+      result
+    }
+  end
+
+  # Convert keys to strings
+  def stringify_keys(hash)
+    transform_hash(hash) {|hash, key, value|       
+      hash[key.to_s] = value
+    }
+  end
 end
