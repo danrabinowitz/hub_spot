@@ -5,8 +5,8 @@ require "net/http"
 module HubSpot
   module HTTP
     DEFAULT_HEADERS = {
-      accept: "application/json",
-      content_type: "application/x-www-form-urlencoded;charset=utf-8",
+      "accept" => "application/json",
+      "content_type" => "application/x-www-form-urlencoded;charset=utf-8",
     }.freeze
 
     # Authentication credentials for HTTP authentication.
